@@ -246,12 +246,12 @@ ee_utils_future_value <- function(future, stdout = TRUE, signal = TRUE, ...) {
 #'
 #' ee_Initialize()
 #'
-#' sakfile <- "/home/rgee_dev/sak_file.json"
-#' # Copy sakfile to the users 'csaybar' and 'ndef'
-#' ee_utils_sak_copy(sakfile = sakfile, users = c("csaybar", "ndef"))
+#' # sakfile <- "/home/rgee_dev/sak_file.json"
+#' ## Copy sakfile to the users 'csaybar' and 'ndef'
+#' # ee_utils_sak_copy(sakfile = sakfile, users = c("csaybar", "ndef"))
 #'
-#' # Copy the sakfile of the user1 to the user2 and user3.
-#' ee_utils_sak_copy(users = c("csaybar", "ndef", "ryali93"))
+#' # # Copy the sakfile of the user1 to the user2 and user3.
+#' # ee_utils_sak_copy(users = c("csaybar", "ndef", "ryali93"))
 #' }
 #' @export
 ee_utils_sak_copy <- function(sakfile, users = NULL, delete = FALSE, quiet = FALSE) {
@@ -386,7 +386,7 @@ ee_utils_sak_validate <- function(sakfile, bucket = NULL, quiet = FALSE) {
       },
       error = function(e) {
         message(e)
-        message("\nAn ERROR raised when rgee tries to create a GCS bucket.")
+        message("\nAn ERROR was raised when rgee tried to create a GCS bucket.")
         return(FALSE)
       }
     )
@@ -419,7 +419,7 @@ ee_utils_sak_validate <- function(sakfile, bucket = NULL, quiet = FALSE) {
       TRUE
     }, error = function(e) {
       message(e)
-      message("\nAn ERROR raised when rgee tries to write in your GCS bucket.")
+      message("\nAn ERROR was raised when rgee tried to write in your GCS bucket.")
       return(FALSE)
     }
   )
@@ -448,7 +448,7 @@ ee_utils_sak_validate <- function(sakfile, bucket = NULL, quiet = FALSE) {
       TRUE
     }, error = function(e) {
       message(e)
-      message("\nAn ERROR raised when rgee tries to read your GCS bucket.")
+      message("\nAn ERROR was raised when rgee tried to read your GCS bucket.")
       return(FALSE)
     }
   )
@@ -481,7 +481,7 @@ ee_utils_sak_validate <- function(sakfile, bucket = NULL, quiet = FALSE) {
       TRUE
     }, error = function(e) {
       message(e)
-      message("\nAn ERROR raised when rgee tries to sync GEE & GCS.")
+      message("\nAn ERROR was raised when rgee tried to sync GEE & GCS.")
       return(FALSE)
     }
   )
